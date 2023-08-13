@@ -1,4 +1,7 @@
 ﻿# Higgs Boson Event Detection Project
+
+
+ 
 ![Python](https://img.shields.io/badge/Python-3776AB.svg?style=for-the-badge&logo=Python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
@@ -11,6 +14,7 @@
 ![Microsoft Word](https://img.shields.io/badge/Microsoft_Word-2B579A?style=for-the-badge&logo=microsoft-word&logoColor=white)
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 ![Windows Terminal](https://img.shields.io/badge/Windows%20Terminal-%234D4D4D.svg?style=for-the-badge&logo=windows-terminal&logoColor=white)
+
 **Particle accelerators.** Physicists use particle accelerators to study the fundamental aspects of matter, space, and time by observing interactions between subatomic particles during high-energy collisions. These collisions provide insights into the structure of these elements. However, the experimental measurements from these collisions are imprecise. To enhance the analysis of this data, researchers utilize machine learning (ML). They employ standardized ML software packages to extract significant features from the raw measurements, aiming to improve statistical accuracy and enhance their understanding of these complex phenomena.
 
 **Higgs boson.** The Higgs boson, sometimes called the God particle, is a crucial component of the standard model of particle physics. This model outlines the fundamental particles and forces that make up the universe. While elementary particles are expected to be without mass at high energies, some gain mass at lower energies, a mystery in theoretical physics for a long time. In 1964, Peter Higgs and others proposed a mechanism explaining the origin of particle mass. This involves a field known as the Higgs field, which particles interact with to acquire mass; the more interaction, the greater the mass. Some particles, like photons, don't interact with this field and remain massless. The Higgs boson is tied to the Higgs field and represents its physical form, granting mass to other particles. Detecting this elusive particle took nearly fifty years since its theoretical proposal.
