@@ -1,170 +1,16 @@
-﻿# Road Traffic Severity Classification by Tushar Aggarwal 
-### Introduction About the Data :
-
-**This data set is collected from Addis Ababa Sub-city police departments for master's research work. The data set has been prepared from manual records of road traffic accidents of the year 2017-20. All the sensitive information has been excluded during data encoding and finally it has 32 features and 12316 instances of the accident. Then it is preprocessed and for identification of major causes of the accident by analyzing it using different machine learning classification algorithms.**
-
-**Problem Statement: The target feature is Accident_severity which is a multi-class variable. The task is to classify this variable based on the other 31 features step-by-step by going through each day's task. Your metric for evaluation will be f1-score.**
-
-Dataset Source Link :
-[NARCIS](https://www.narcis.nl/dataset/RecordID/oai%3Aeasy.dans.knaw.nl%3Aeasy-dataset%3A191591)
-
-# Demo:
-```
-streamlit run RTS_app.py
-```
- Pip install libraries
-```
-pip install -r requirements.txt
-```
-# Deployed Link:
-### Streamllit:
- ```
-https://tushar2704-road-traffic-severity-rts-app-sf35uz.streamlit.app/
- ```
-### Render:
- ```
-https://rts-app.onrender.com
- ```
-
-
-
-### It is observed that the categorical variables 'cut', 'color' and 'clarity' are ordinal in nature
-
-### Check this link for details : []()
-
-# AWS Deployment Link :
-
-AWS Elastic Beanstalk link : []()
-
-# Screenshot of UI
-
-![HomepageUI](./Screenshots/HomepageUI.jpg)
-
-# YouTube Video Link
-
-Link for YouTube Video : Click the below thumbnail to open 
-
-
-
-# AWS API Link
-
-API Link : []()
-
-# Postman Testing of API :
-
-![API Prediction](./Screenshots/APIPrediction.jpg)
-
-# Approach for the project 
-
-1. Data Ingestion : 
-    * In Data Ingestion phase the data is first read as csv. 
-    * Then the data is split into training and testing and saved as csv file.
-
-2. Data Transformation : 
-    * In this phase a ColumnTransformer Pipeline is created.
-    * for Numeric Variables first SimpleImputer is applied with strategy median , then Standard Scaling is performed on numeric data.
-    * for Categorical Variables SimpleImputer is applied with most frequent strategy, then ordinal encoding performed , after this data is scaled with Standard Scaler.
-    * This preprocessor is saved as pickle file.
-
-3. Model Training : 
-    * In this phase base model is tested . The best model found was catboost regressor.
-    * After this hyperparameter tuning is performed on catboost and knn model.
-    * A final VotingRegressor is created which will combine prediction of catboost, xgboost and knn models.
-    * This model is saved as pickle file.
-
-4. Prediction Pipeline : 
-    * This pipeline converts given data into dataframe and has various functions to load pickle files and predict the final results in python.
-
-5. Flask App creation : 
-    * Flask app is created with User Interface to predict the gemstone prices inside a Web Application.
-
-# Exploratory Data Analysis Notebook
-
-Link : [EDA Notebook](./notebook/1_EDA_Gemstone_price.ipynb)
-
-# Model Training Approach Notebook
-
-Link : [Model Training Notebook](./notebook/2_Model_Training_Gemstone.ipynb)
-
-# Model Interpretation with LIME 
-
-Link : [LIME Interpretation](./notebook/3_Explainability_with_LIME.ipynb)
-
-
-
-
-
-
-"""""""""""""""""""""""""""""""
-## Loan Approval Prediction - Random Forest Model and Deployed Web App
-
-## Project Purpose: 
-To demonstrate a full ML project from scratch to deployment to a web app.
-
-## Business Case: 
-To create a model that accurately predicts loan approval and automates the manual approval process. 
-
-## Goal: 
-To accurately predict loan approvals without falsely approving too many loans that should be denied (minimize False Positives). 
-
-## Deliverable: 
-A web app that end users can utilize to predict loan approvals using a Random Forest model on the backend. 
-
-    1. Web App: https://jessramos2-loan-approval-random-forest-web-streamlit-app-47jl27.streamlitapp.com/
-    
-  <img src="WebAppPic.jpg" width="430" height="400">
-
-### In Repository:
-
-1. Data & data dictionary
-
-<img src="DataDictionary.jpg" width="350" height="250">
-
-2. Random Forest Model Creation (Loan Approval Model.ipynb)
-
-3. Sample decision tree from random forest
-    
- ![](DecisionTree.jpg)
-
-4. Web App Python Code (streamlit_app.py)
-
-5. Web app link and screenshot
-
-
-## Results and Model Evaluation: 
-
-From a business perspective, we want to avoid predicting a positve loan approval when it was actually denied (False Positives), so ***Precision*** will be our best measures for the model. This will ensure that we are accurately predicting loan approvals and that predicted approvals are actual approvals (precision). 
-
-Since this model produces very similar precision scores on both the training and testing data, it appears to be the best fit to maximize predictive power on the training dataset without overfitting and sacrificing predictability on the testing data. 
-
-**Precision:** 
-Precision on the testing data is ~78%, which means that we don't have a large amount of False Positives. This is great, because as a business, we want to avoid predicting loans approvals that will have to be denied later. 
-
-
-**Accuracy:**
-Accuracy on the testing data is ~80% which means that the model correctly predicts 4/5 of the loans. 
-
-
-**Recall:**
- Recall on the testing data is 100% which means that the model accurately predicts all True Positives. This means that we will not miss out on any potential loan approvals (and revenue). 
-
-
-**F1 Score:**
-The F1 score on the testing data is ~88%, which is great since it takes into account both False Positives and False Negatives. 
-
-
-## Business Impact: 
-
-End users will be able to use the web app built off of this model to predict loan approvals right in front of the borrower. There will be no missed revenue opportunities since the model captures all true approvals (recall is 100%), and only a small portion of borrowers predicted to be approved will actually be denied. This will speed up the manual approval process and allow the company to process more loans in less time, resulting in more clients and revenue. 
-
-
-### Next Steps: Monitor performance and retrain model with more data as more data becomes available. 
-# Game-Of-Thrones-Text-Gen
-# Higgs_Boson_Event_Detection
-# Higgs Boson Event Detection
- 
-## Backstory
-
+﻿# Higgs Boson Event Detection Project
+![Python](https://img.shields.io/badge/Python-3776AB.svg?style=for-the-badge&logo=Python&logoColor=white)
+![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
+![Microsoft Excel](https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
+![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white)
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)
+![Microsoft Office](https://img.shields.io/badge/Microsoft_Office-D83B01?style=for-the-badge&logo=microsoft-office&logoColor=white)
+![Microsoft Word](https://img.shields.io/badge/Microsoft_Word-2B579A?style=for-the-badge&logo=microsoft-word&logoColor=white)
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+![Windows Terminal](https://img.shields.io/badge/Windows%20Terminal-%234D4D4D.svg?style=for-the-badge&logo=windows-terminal&logoColor=white)
 **Particle accelerators.** To probe into the basic questions on how matter, space and time work and how they are structured, physicists focus on the simplest interactions (for example, collision of [**subatomic particles**](https://en.wikipedia.org/wiki/Subatomic_particle)) at very high energy. [**Particle accelerators**](https://en.wikipedia.org/wiki/Particle_accelerator) enable physicists to explore the fundamental nature of matter by observing subatomic particles produced by high-energy collisions of [**particle beams**](https://en.wikipedia.org/wiki/Particle_beam). The experimental measurements from these collisions inevitably lack precision, which is where [**machine learning**](https://en.wikipedia.org/wiki/Machine_learning) (ML) comes into picture. The research community typically relies on standardized machine learning software packages for the analysis of the data obtained from such experiments and spends a huge amount of effort towards improving statistical power by extracting features of significance, derived from the raw measurements.
 
 **Higgs boson.** The [**Higgs boson**](https://en.wikipedia.org/wiki/Higgs_boson) [**particle**](https://en.wikipedia.org/wiki/Elementary_particle), also called the **God particle** in mainstream media, is the final ingredient of the [**standard model**](https://en.wikipedia.org/wiki/Standard_Model) of [**particle physics**](https://en.wikipedia.org/wiki/Particle_physics), which sets the rules for the subatomic particles and forces. The [**elementary particles**](https://en.wikipedia.org/wiki/Elementary_particle) are supposed to be massless at very high energies, but some of them can acquire mass at low-energies. The mechanism of this acquiring remained an enigma in theoretical physics for a long time. In $1964$, [**Peter Higgs**](https://en.wikipedia.org/wiki/Peter_Higgs) and others proposed a [**mechanism**](https://en.wikipedia.org/wiki/Higgs_mechanism) that theoretically explains the [**origin of mass of elementary particles**](https://en.wikipedia.org/wiki/Mass_generation). The mechanism involves a **field**, commonly known as [**Higgs field**](https://en.wikipedia.org/wiki/Higgs_mechanism#Structure_of_the_Higgs_field), that the paricles can interact with to gain mass. The more a particle interacts with it, the heavier it is. Some particles, like [**photon**](https://en.wikipedia.org/wiki/Photon), do not interact with this field at all and remain massless. The Higgs boson particle is the associated particle of the Higgs field (all fundamental fields have one). It is essentially the physical manifestation of the Higgs field, which gives mass to other particles. The detection of this elusive particle waited almost half a century since its theorization!
@@ -180,6 +26,27 @@ End users will be able to use the web app built off of this model to predict loa
     <img src = "https://raw.githubusercontent.com/sugatagh/Higgs-Boson-Event-Detection/main/Image/atlas_experiment.png" alt = "Higgs into fermions: Evidence of the Higgs boson decaying to fermions" width = "600">
     <figcaption> Fig 1. Higgs into fermions: Evidence of the Higgs boson decaying to fermions (image credit: CERN) </figcaption>
 </figure>
+## Project Structure
+
+The project repository is organized as follows:
+
+```
+
+├── LICENSE
+├── README.md           <- README .
+├── notebooks           <- Folder containing the final reports/results of this project.
+│   │
+│   └── Higgs Boson Event Detection.py   <- Final notebook for the project.
+├── reports            <- Folder containing the final reports/results of this project.
+│   │
+│   └── Pizza_Sales_Report.pdf   <- Final analysis report in PDF.
+│   
+├── src                <- Source for this project.
+│   │
+│   └── data           <- Datasets used and collected for this project.
+|   └── model          <- Model.
+
+```
 
 ## LHC at Work
 
@@ -193,7 +60,7 @@ End users will be able to use the web app built off of this model to predict loa
 
 **The broad goal is to improve the procedure that produces the selection region, i.e. the region (not necessarily connected) in the feature space which produces signal events.**
 
-## Enter ML
+## Approach
 
 **Shallow neural network.** Machine learning plays a major role in processing data resulting from experiments at particle colliders. The ML classifiers learn to distinguish between different types of collision events by training on simulated data from sophisticated Monte-Carlo programs. Shallow [**neural networks**](https://en.wikipedia.org/wiki/Neural_network) with single hidden layer are one of the primary techniques used for this analysis and standardized implementations are included in the prevalent multivariate analysis software tools used by physicists. Efforts to increase statistical power tend to focus on developing new features for use with the existing machine learning classifiers. These high-level features are non-linear functions of the low-level measurements, derived using knowledge of the underlying physical processes.
 
@@ -234,3 +101,18 @@ and
 $$ b = \sum_{i=1}^n w_i \mathbb{1}\left\\{y_i = b\right\\} \mathbb{1}\left\\{\hat{y_i} = s\right\\}, $$
 
 where the [**indicator function**](https://en.wikipedia.org/wiki/Indicator_function) $\mathbb{1}\left\\{S\right\\}$ is $1$ if $S$ is true and $0$ otherwise.
+
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+## Author
+- <ins><b>©2023 Tushar Aggarwal. All rights reserved</b></ins>
+- <b>[LinkedIn](https://www.linkedin.com/in/tusharaggarwalinseec/)</b>
+- <b>[Medium](https://medium.com/@tushar_aggarwal)</b> 
+- <b>[Tushar-Aggarwal.com](https://www.tushar-aggarwal.com/)</b>
+- <b>[New Kaggle](https://www.kaggle.com/tagg27)</b> 
+
+## Contact me!
+If you have any questions, suggestions, or just want to say hello, you can reach out to us at [Tushar Aggarwal](mailto:info@tushar-aggarwal.com). We would love to hear from you!
+
